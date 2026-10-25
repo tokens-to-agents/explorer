@@ -61,7 +61,7 @@ export function MapExplorer({ points, countries, flows, layers }: MapExplorerPro
       }
     >
       {/* The globe centers in the space the panel leaves free: above it on phones, to its right on large screens. */}
-      <div className="absolute inset-x-0 top-16 bottom-[40dvh] lg:top-0 lg:bottom-0 lg:left-[23rem]">
+      <div className="absolute inset-x-0 top-16 bottom-[40dvh] lg:top-0 lg:bottom-0 lg:left-[23rem] xl:left-0">
         <GlobeCanvas
           key={look.id}
           look={look}
