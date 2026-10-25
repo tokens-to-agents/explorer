@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 import {
   createColumnHelper,
+  type RowData,
   flexRender,
   getCoreRowModel,
   getFilteredRowModel,
@@ -13,13 +14,24 @@ import {
 import { ArrowDown, ArrowUp, ArrowUpDown, Search } from "lucide-react";
 import { FilterChip } from "@/components/filter-chip";
 import { Input } from "@/components/ui/input";
+import { Tooltip } from "@/components/ui/tooltip";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { SourceLink } from "@/components/wiki-link";
+import { benchmarks } from "@/config/benchmarks";
 import { OPENNESS, opennessLabels, palette } from "@/config/taxonomy";
 import type { Model } from "@/lib/data/schema";
 import { cn, formatBillions, formatPartialDate, formatTokens, formatUsd, partialDateKey } from "@/lib/utils";
 
-export type ModelRow = Model & { labName: string };
+export type ScoreCell = { score: number; variant?: string; source: string; checked?: string };
+export type ModelRow = Model & { labName: string; scores: Partial<Record<string, ScoreCell>> };
+
+declare module "@tanstack/react-table" {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  interface ColumnMeta<TData extends RowData, TValue> {
+    /** Explanation shown when the reader points at the column header. */
+    hint?: React.ReactNode;
+  }
+}
 
 const opennessColors: Record<Model["openness"], string> = {
   closed: palette.salmon,
@@ -43,7 +55,11 @@ const columns = [
     header: "Weights",
     cell: (info) => (
       <span className="inline-flex items-center gap-2 text-sm">
-        <span aria-hidden className="size-2 rounded-full" style={{ backgroundColor: opennessColors[info.getValue()] }} />
+        <span
+          aria-hidden
+          className="size-2 rounded-full"
+          style={{ backgroundColor: opennessColors[info.getValue()] }}
+        />
         {opennessLabels[info.getValue()]}
       </span>
     ),
@@ -53,6 +69,31 @@ const columns = [
     sortingFn: (a, b) => partialDateKey(a.original.released!).localeCompare(partialDateKey(b.original.released!)),
     cell: (info) => <span className="tabular-nums">{info.getValue() ? formatPartialDate(info.getValue()!) : "—"}</span>,
   }),
+  ...benchmarks.map((benchmark) =>
+    column.accessor((row) => row.scores[benchmark.id]?.score, {
+      id: benchmark.id,
+      header: benchmark.label,
+      meta: { hint: benchmark.description },
+      cell: (info) => {
+        const cell = info.row.original.scores[benchmark.id];
+        if (!cell) return <span className="text-faint-foreground">—</span>;
+        const value = benchmark.format === "percent" ? `${cell.score}%` : cell.score.toLocaleString("en");
+        return (
+          <a
+            href={cell.source}
+            target="_blank"
+            rel="noreferrer"
+            title={cell.checked ? `Checked ${formatPartialDate(cell.checked)}` : "Not verified yet"}
+            className={cn("tabular-nums hover:underline", !cell.checked && "text-muted-foreground")}
+          >
+            {value}
+            {!cell.checked && <span aria-label="not verified yet">*</span>}
+            {cell.variant && <span className="ml-1.5 text-xs text-faint-foreground">{cell.variant}</span>}
+          </a>
+        );
+      },
+    }),
+  ),
   column.accessor("params_total_b", {
     header: "Parameters",
     cell: (info) => {
@@ -75,7 +116,9 @@ const columns = [
     header: "$ / M tokens in · out",
     cell: (info) => {
       const { price_in_usd_per_mtok: input, price_out_usd_per_mtok: output } = info.row.original;
-      return <span className="tabular-nums">{input === undefined ? "—" : `${formatUsd(input)} · ${formatUsd(output)}`}</span>;
+      return (
+        <span className="tabular-nums">{input === undefined ? "—" : `${formatUsd(input)} · ${formatUsd(output)}`}</span>
+      );
     },
   }),
   column.accessor("source", {
@@ -147,8 +190,17 @@ export function ModelsTable({ models }: { models: ModelRow[] }) {
           ))}
         </div>
         <div className="relative md:ml-auto md:w-64">
-          <Search aria-hidden className="pointer-events-none absolute top-1/2 left-3.5 size-3.5 -translate-y-1/2 text-faint-foreground" />
-          <Input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Search a model or a lab" aria-label="Search models" className="pl-9" />
+          <Search
+            aria-hidden
+            className="pointer-events-none absolute top-1/2 left-3.5 size-3.5 -translate-y-1/2 text-faint-foreground"
+          />
+          <Input
+            value={query}
+            onChange={(event) => setQuery(event.target.value)}
+            placeholder="Search a model or a lab"
+            aria-label="Search models"
+            className="pl-9"
+          />
         </div>
       </div>
 
@@ -161,19 +213,31 @@ export function ModelsTable({ models }: { models: ModelRow[] }) {
                   const sorted = header.column.getIsSorted();
                   const Icon = sorted === "asc" ? ArrowUp : sorted === "desc" ? ArrowDown : ArrowUpDown;
                   return (
-                    <TableHead key={header.id} aria-sort={sorted === "asc" ? "ascending" : sorted === "desc" ? "descending" : undefined}>
-                      {header.column.getCanSort() ? (
-                        <button
-                          type="button"
-                          onClick={header.column.getToggleSortingHandler()}
-                          className={cn("inline-flex items-center gap-1.5 transition-colors hover:text-foreground", sorted && "text-foreground")}
-                        >
-                          {flexRender(header.column.columnDef.header, header.getContext())}
-                          <Icon className="size-3.5" />
-                        </button>
-                      ) : (
-                        flexRender(header.column.columnDef.header, header.getContext())
-                      )}
+                    <TableHead
+                      key={header.id}
+                      aria-sort={sorted === "asc" ? "ascending" : sorted === "desc" ? "descending" : undefined}
+                    >
+                      <span className="group/tip relative inline-flex">
+                        {header.column.getCanSort() ? (
+                          <button
+                            type="button"
+                            aria-describedby={header.column.columnDef.meta?.hint ? `hint-${header.id}` : undefined}
+                            onClick={header.column.getToggleSortingHandler()}
+                            className={cn(
+                              "inline-flex items-center gap-1.5 transition-colors hover:text-foreground",
+                              sorted && "text-foreground",
+                            )}
+                          >
+                            {flexRender(header.column.columnDef.header, header.getContext())}
+                            <Icon className="size-3.5" />
+                          </button>
+                        ) : (
+                          flexRender(header.column.columnDef.header, header.getContext())
+                        )}
+                        {header.column.columnDef.meta?.hint && (
+                          <Tooltip id={`hint-${header.id}`} content={header.column.columnDef.meta.hint} />
+                        )}
+                      </span>
                     </TableHead>
                   );
                 })}
@@ -198,6 +262,25 @@ export function ModelsTable({ models }: { models: ModelRow[] }) {
           </TableBody>
         </Table>
       </div>
+
+      <p className="text-xs leading-relaxed text-faint-foreground">
+        Scores:{" "}
+        {benchmarks.map((benchmark, index) => (
+          <span key={benchmark.id}>
+            {index > 0 && " · "}
+            <a
+              href={benchmark.url}
+              target="_blank"
+              rel="noreferrer"
+              className="underline underline-offset-4 hover:text-foreground"
+            >
+              {benchmark.label}
+            </a>
+          </span>
+        ))}
+        . Each score links to its source; * = not verified yet. A small label next to a score is the setting tested
+        (reasoning effort, version).
+      </p>
     </div>
   );
 }

@@ -17,14 +17,14 @@ export function TimelineExplorer({ events }: { events: TimelineEvent[] }) {
 
   const counts = useMemo(() => {
     const result = Object.fromEntries(TAG_IDS.map((id) => [id, 0])) as Record<TagId, number>;
-    for (const event of events) result[event.tag] += 1;
+    for (const event of events) for (const tag of event.tags) result[tag] += 1;
     return result;
   }, [events]);
 
   const groups = useMemo(() => {
     const needle = query.trim().toLowerCase();
     const filtered = events
-      .filter((event) => activeTags.has(event.tag))
+      .filter((event) => event.tags.some((tag) => activeTags.has(tag)))
       .filter((event) => !needle || event.title.toLowerCase().includes(needle) || event.date.startsWith(needle))
       .sort((a, b) => partialDateKey(a.date).localeCompare(partialDateKey(b.date)));
     if (newestFirst) filtered.reverse();
@@ -47,7 +47,7 @@ export function TimelineExplorer({ events }: { events: TimelineEvent[] }) {
 
   return (
     <div className="space-y-8">
-      <div className="glass z-30 flex flex-col gap-3 rounded-xl p-4 md:sticky md:top-24 md:flex-row md:items-center">
+      <div className="glass-bar z-30 flex flex-col gap-3 rounded-xl p-4 md:sticky md:top-24 md:flex-row md:items-center">
         <div className="flex flex-wrap gap-2">
           {TAG_IDS.map((id) => (
             <FilterChip
@@ -55,6 +55,12 @@ export function TimelineExplorer({ events }: { events: TimelineEvent[] }) {
               label={tags[id].label}
               color={tags[id].color}
               count={counts[id]}
+              hint={
+                <>
+                  <span className="text-foreground">{tags[id].label}:</span> {tags[id].description} Explained in{" "}
+                  {tags[id].section}.
+                </>
+              }
               pressed={activeTags.has(id)}
               onPressedChange={(on) => toggleTag(id, on)}
             />
@@ -62,7 +68,10 @@ export function TimelineExplorer({ events }: { events: TimelineEvent[] }) {
         </div>
         <div className="flex items-center gap-2 md:ml-auto">
           <div className="relative w-full md:w-56">
-            <Search aria-hidden className="pointer-events-none absolute top-1/2 left-3.5 size-3.5 -translate-y-1/2 text-faint-foreground" />
+            <Search
+              aria-hidden
+              className="pointer-events-none absolute top-1/2 left-3.5 size-3.5 -translate-y-1/2 text-faint-foreground"
+            />
             <Input
               value={query}
               onChange={(event) => setQuery(event.target.value)}
@@ -71,14 +80,20 @@ export function TimelineExplorer({ events }: { events: TimelineEvent[] }) {
               className="pl-9"
             />
           </div>
-          <Button variant="glass" size="icon" onClick={() => setNewestFirst((value) => !value)} aria-label={newestFirst ? "Show oldest first" : "Show newest first"} title={newestFirst ? "Oldest first" : "Newest first"}>
+          <Button
+            variant="glass"
+            size="icon"
+            onClick={() => setNewestFirst((value) => !value)}
+            aria-label={newestFirst ? "Show oldest first" : "Show newest first"}
+            title={newestFirst ? "Oldest first" : "Newest first"}
+          >
             <ArrowDownUp />
           </Button>
         </div>
       </div>
 
       <p className="text-sm text-muted-foreground">
-        {shown} of {events.length} events
+        {shown} of {events.length} events · an event can carry several tags; point at a tag to see what it covers.
       </p>
 
       <div className="space-y-12">
@@ -100,7 +115,7 @@ export function TimelineExplorer({ events }: { events: TimelineEvent[] }) {
                   <span
                     aria-hidden
                     className="absolute top-5 -left-[29px] size-2.5 rounded-full ring-4 ring-background"
-                    style={{ backgroundColor: tags[event.tag].color }}
+                    style={{ backgroundColor: tags[event.tags[0]!].color }}
                   />
                   <article className="glass flex flex-col gap-2 rounded-lg px-4 py-3 sm:flex-row sm:items-center sm:gap-4">
                     <time dateTime={event.date} className="w-28 shrink-0 text-sm text-muted-foreground tabular-nums">
@@ -108,9 +123,18 @@ export function TimelineExplorer({ events }: { events: TimelineEvent[] }) {
                     </time>
                     <p className="flex-1 text-sm leading-relaxed">{event.title}</p>
                     <div className="flex items-center gap-3">
-                      <span className="text-xs" style={{ color: tags[event.tag].color }}>
-                        {tags[event.tag].label}
-                      </span>
+                      <ul aria-label="Tags" className="flex flex-wrap justify-end gap-x-2.5 gap-y-1">
+                        {event.tags.map((tag) => (
+                          <li
+                            key={tag}
+                            className="text-xs"
+                            style={{ color: tags[tag].color }}
+                            title={tags[tag].description}
+                          >
+                            {tags[tag].label}
+                          </li>
+                        ))}
+                      </ul>
                       <SourceLink href={event.source} />
                     </div>
                   </article>

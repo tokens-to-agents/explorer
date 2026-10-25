@@ -3,7 +3,8 @@ import type { WikiPageKey } from "./wiki";
 
 /**
  * Map layers. Adding a layer = one entry here (+ its rows in data/).
- * `points` layers read labs.csv or places.csv; `countries` layers read countries.csv.
+ * `points` layers read labs.csv or places.csv; `countries` layers read countries.csv;
+ * `flows` layers read flows.csv (animated arcs between two places).
  */
 export type LayerConfig =
   | {
@@ -22,6 +23,15 @@ export type LayerConfig =
       label: string;
       description: string;
       kind: "countries";
+      wiki: WikiPageKey;
+      status: "live";
+      defaultOn: boolean;
+    }
+  | {
+      id: string;
+      label: string;
+      description: string;
+      kind: "flows";
       wiki: WikiPageKey;
       status: "live";
       defaultOn: boolean;
@@ -60,7 +70,16 @@ export const layers: LayerConfig[] = [
     source: { file: "places", types: ["chip-design", "fab", "equipment", "memory"] },
     wiki: "chipSupplyChain",
     status: "live",
-    defaultOn: false,
+    defaultOn: true,
+  },
+  {
+    id: "chip-flows",
+    label: "Chip flows",
+    description: "What travels between the sites of the supply chain: machines, designs, memory, finished chips.",
+    kind: "flows",
+    wiki: "chipSupplyChain",
+    status: "live",
+    defaultOn: true,
   },
   {
     id: "regulation",

@@ -1,7 +1,7 @@
 import { layers, type LayerConfig } from "@/config/layers";
-import { placeTypeLabels, regulationLevels } from "@/config/taxonomy";
+import { flowKinds, placeTypeLabels, regulationLevels } from "@/config/taxonomy";
 import type { ExplorerData } from "@/lib/data/load";
-import type { MapCountry, MapLayerState, MapPoint } from "./types";
+import type { MapCountry, MapFlow, MapLayerState, MapPoint } from "./types";
 
 const labTypeLabels = { frontier: "Frontier lab", "open-weight": "Open-weight lab", research: "Research lab" } as const;
 const statusLabels = { planned: "Planned", construction: "Under construction", operational: "Operational" } as const;
@@ -54,7 +54,9 @@ function pointsFor(layer: Extract<LayerConfig, { kind: "points" }>, data: Explor
 export function buildMapData(data: ExplorerData) {
   const points: MapPoint[] = [];
   const countries: MapCountry[] = [];
+  const flows: MapFlow[] = [];
   const states: MapLayerState[] = [];
+  const placesById = new Map(data.places.map((place) => [place.id, place]));
 
   for (const layer of layers) {
     if (layer.status === "planned") {
@@ -65,6 +67,30 @@ export function buildMapData(data: ExplorerData) {
       const layerPoints = pointsFor(layer, data);
       points.push(...layerPoints);
       states.push({ ...layer, count: layerPoints.length });
+      continue;
+    }
+    if (layer.kind === "flows") {
+      const layerFlows: MapFlow[] = data.flows.flatMap((flow) => {
+        const from = placesById.get(flow.from_id);
+        const to = placesById.get(flow.to_id);
+        if (!from || !to) return []; // loadAll() already rejects unknown ids
+        return [
+          {
+            id: flow.id,
+            layerId: layer.id,
+            from: { name: from.name, lat: from.lat, lon: from.lon },
+            to: { name: to.name, lat: to.lat, lon: to.lon },
+            kindLabel: flowKinds[flow.kind].label,
+            label: flow.label,
+            color: flowKinds[flow.kind].color,
+            source: flow.source,
+            checked: flow.checked,
+            wiki: layer.wiki,
+          },
+        ];
+      });
+      flows.push(...layerFlows);
+      states.push({ ...layer, count: layerFlows.length });
       continue;
     }
     const layerCountries: MapCountry[] = data.countries.map((country) => ({
@@ -83,5 +109,5 @@ export function buildMapData(data: ExplorerData) {
     states.push({ ...layer, count: layerCountries.length });
   }
 
-  return { points, countries, layers: states };
+  return { points, countries, flows, layers: states };
 }

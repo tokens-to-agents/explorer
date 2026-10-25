@@ -1,0 +1,8 @@
+id,from_id,to_id,kind,label,source,checked
+asml-to-tsmc,asml,tsmc-hsinchu,equipment,EUV lithography machines,https://en.wikipedia.org/wiki/ASML_Holding,
+nvidia-to-tsmc,nvidia,tsmc-hsinchu,design,GPU designs manufactured by TSMC,https://en.wikipedia.org/wiki/Nvidia,
+sk-hynix-to-tsmc,sk-hynix,tsmc-hsinchu,memory,HBM memory packaged next to the GPU (CoWoS),https://chipchatter.substack.com/p/the-real-bottleneck-in-gpu-manufacturing,
+micron-to-tsmc,micron,tsmc-hsinchu,memory,HBM memory for NVIDIA GPUs,https://en.wikipedia.org/wiki/Micron_Technology,
+tsmc-to-abilene,tsmc-hsinchu,stargate-abilene,chips,NVIDIA GB200 GPUs,https://datacenterdynamics.com/en/news/openai-and-oracle-to-deploy-64000-gb200-gpus-at-stargate-abilene-data-center-by-2026-report,
+tsmc-to-colossus,tsmc-hsinchu,colossus,chips,NVIDIA GPUs,https://en.wikipedia.org/wiki/Colossus_(supercomputer),
+tsmc-to-fairwater,tsmc-hsinchu,fairwater,chips,NVIDIA GB200 GPUs,https://blogs.microsoft.com/on-the-issues/?p=67180,

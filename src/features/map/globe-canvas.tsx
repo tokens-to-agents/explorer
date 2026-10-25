@@ -2,12 +2,13 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import Globe, { type GlobeMethods } from "react-globe.gl";
-import { MeshPhongMaterial } from "three";
+import { Color, MeshPhongMaterial, TextureLoader } from "three";
 import { feature } from "topojson-client";
 import type { Feature, FeatureCollection, Geometry } from "geojson";
 import type { GeometryCollection, Topology } from "topojson-specification";
 import worldTopology from "world-atlas/countries-110m.json";
-import type { MapCountry, MapPoint, MapSelection } from "./types";
+import type { GlobeStyle } from "@/config/globe";
+import type { MapCountry, MapFlow, MapPoint, MapSelection } from "./types";
 
 type CountryFeature = Feature<Geometry, { name: string }> & { id?: string | number };
 
@@ -43,15 +44,20 @@ function tooltip(title: string, subtitle: string) {
 }
 
 type GlobeCanvasProps = {
+  look: GlobeStyle;
   points: MapPoint[];
   countries: MapCountry[];
+  flows: MapFlow[];
   selection: MapSelection | null;
   onHover: (selection: MapSelection | null) => void;
   onSelect: (selection: MapSelection | null) => void;
 };
 
-/** The WebGL globe. Client-only: loaded through next/dynamic by MapExplorer. */
-export default function GlobeCanvas({ points, countries, selection, onHover, onSelect }: GlobeCanvasProps) {
+/**
+ * The WebGL globe. Client-only: loaded through next/dynamic by MapExplorer.
+ * MapExplorer remounts it (React key) when the look changes, so each look starts from a clean material.
+ */
+export default function GlobeCanvas({ look, points, countries, flows, selection, onHover, onSelect }: GlobeCanvasProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const globeRef = useRef<GlobeMethods | undefined>(undefined);
   const [size, setSize] = useState({ width: 0, height: 0 });
@@ -66,10 +72,39 @@ export default function GlobeCanvas({ points, countries, selection, onHover, onS
     return () => observer.disconnect();
   }, []);
 
+  // One material per look. three-globe puts the surface image and the relief into it;
+  // the minimal look has no image and stays a dark sphere under dotted land.
   const material = useMemo(
-    () => new MeshPhongMaterial({ color: "#202023", emissive: "#121214", emissiveIntensity: 0.7, shininess: 6 }),
-    [],
+    () =>
+      look.surface
+        ? new MeshPhongMaterial({ shininess: 14 })
+        : new MeshPhongMaterial({ color: "#202023", emissive: "#121214", emissiveIntensity: 0.7, shininess: 6 }),
+    [look.surface],
   );
+
+  // Oceans reflect the light: the water mask becomes the specular map.
+  useEffect(() => {
+    if (!look.water) return;
+    const texture = new TextureLoader().load(look.water, () => {
+      material.specularMap = texture;
+      material.specular = new Color("#3a4a5a");
+      material.needsUpdate = true;
+    });
+    return () => texture.dispose();
+  }, [look.water, material]);
+
+  // Night look: the surface glows, so city lights read as lights instead of a dim lit texture.
+  useEffect(() => {
+    if (!look.glow || !look.surface) return;
+    const texture = new TextureLoader().load(look.surface, () => {
+      material.emissiveMap = texture;
+      material.emissive = new Color("#ffffff");
+      material.emissiveIntensity = 0.85;
+      material.needsUpdate = true;
+    });
+    texture.colorSpace = "srgb";
+    return () => texture.dispose();
+  }, [look.glow, look.surface, material]);
 
   const countryByIso = useMemo(() => new Map(countries.map((country) => [country.iso, country])), [countries]);
   const countryShapes = useMemo(
@@ -87,13 +122,17 @@ export default function GlobeCanvas({ points, countries, selection, onHover, onS
   }, [selection, size.width]);
 
   const handleReady = () => {
-    globeRef.current?.pointOfView({ lat: 28, lng: 20, altitude: 2.3 }, 0);
+    // Closer on wide screens, further on phones so the whole globe fits.
+    const altitude = size.width < 640 ? 2.7 : 1.85;
+    globeRef.current?.pointOfView({ lat: 30, lng: -20, altitude }, 0);
   };
 
   const selectedPoint = selection?.type === "point" ? selection.item : null;
   const selectedIso = selection?.type === "country" ? selection.item.iso : null;
+  const selectedFlow = selection?.type === "flow" ? selection.item.id : null;
 
   const asPoint = (object: object) => object as MapPoint;
+  const asFlow = (object: object) => object as MapFlow;
   const asShape = (object: object) => object as CountryFeature;
   const countryOf = (object: object) => countryByIso.get(String(asShape(object).id));
 
@@ -107,10 +146,12 @@ export default function GlobeCanvas({ points, countries, selection, onHover, onS
           onGlobeReady={handleReady}
           backgroundColor="rgba(0,0,0,0)"
           globeMaterial={material}
+          globeImageUrl={look.surface ?? null}
+          bumpImageUrl={look.relief ?? null}
           showAtmosphere
-          atmosphereColor="#7EAAD4"
-          atmosphereAltitude={0.16}
-          hexPolygonsData={land}
+          atmosphereColor={look.atmosphere}
+          atmosphereAltitude={0.18}
+          hexPolygonsData={look.surface ? [] : land}
           hexPolygonResolution={3}
           hexPolygonMargin={0.55}
           hexPolygonUseDots
@@ -120,7 +161,7 @@ export default function GlobeCanvas({ points, countries, selection, onHover, onS
           polygonCapColor={(object) => {
             const country = countryOf(object);
             if (!country) return "rgba(0,0,0,0)";
-            return withAlpha(country.color, country.iso === selectedIso ? 0.55 : 0.32);
+            return withAlpha(country.color, country.iso === selectedIso ? 0.6 : 0.36);
           }}
           polygonSideColor={() => "rgba(0,0,0,0)"}
           polygonStrokeColor={() => COUNTRY_STROKE}
@@ -147,6 +188,24 @@ export default function GlobeCanvas({ points, countries, selection, onHover, onS
           pointLabel={(object) => tooltip(asPoint(object).name, `${asPoint(object).kind} · ${asPoint(object).location}`)}
           onPointHover={(object) => onHover(object ? { type: "point", item: asPoint(object) } : null)}
           onPointClick={(object) => onSelect({ type: "point", item: asPoint(object) })}
+          arcsData={flows}
+          arcStartLat={(object) => asFlow(object).from.lat}
+          arcStartLng={(object) => asFlow(object).from.lon}
+          arcEndLat={(object) => asFlow(object).to.lat}
+          arcEndLng={(object) => asFlow(object).to.lon}
+          arcColor={(object: object) => {
+            const flow = asFlow(object);
+            const alpha = selectedFlow && selectedFlow !== flow.id ? 0.25 : 0.95;
+            return [withAlpha(flow.color, alpha * 0.35), withAlpha(flow.color, alpha)];
+          }}
+          arcStroke={(object) => (asFlow(object).id === selectedFlow ? 0.9 : 0.5)}
+          arcAltitudeAutoScale={0.3}
+          arcDashLength={0.4}
+          arcDashGap={0.18}
+          arcDashAnimateTime={2600}
+          arcLabel={(object) => tooltip(`${asFlow(object).from.name} → ${asFlow(object).to.name}`, asFlow(object).label)}
+          onArcHover={(object) => onHover(object ? { type: "flow", item: asFlow(object) } : null)}
+          onArcClick={(object) => onSelect({ type: "flow", item: asFlow(object) })}
           onGlobeClick={() => onSelect(null)}
           ringsData={selectedPoint ? [selectedPoint] : []}
           ringLat={(object) => asPoint(object).lat}

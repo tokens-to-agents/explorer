@@ -12,7 +12,7 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-40 px-4 pt-4">
-      <div className="glass mx-auto flex h-14 max-w-6xl items-center gap-2 rounded-full pr-2 pl-4 sm:gap-4 sm:pl-5">
+      <div className="glass-bar mx-auto flex h-14 max-w-6xl items-center gap-2 rounded-full pr-2 pl-4 sm:gap-4 sm:pl-5">
         <Link href="/" className="flex items-baseline gap-2 text-sm font-semibold tracking-tight whitespace-nowrap sm:text-base">
           {site.name}
           <span className="hidden text-sm font-normal text-muted-foreground sm:inline">{site.product}</span>

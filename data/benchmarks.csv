@@ -1,0 +1,15 @@
+model_id,benchmark,score,variant,source,checked
+claude-opus-5-5,aa-index,58,max,https://artificialanalysis.ai/leaderboards/models,2026-10-25
+gpt-6-astra,aa-index,53,max,https://artificialanalysis.ai/leaderboards/models,2026-10-25
+gemini-4-argon,aa-index,53,high,https://artificialanalysis.ai/leaderboards/models,2026-10-25
+grok-4-7,aa-index,46,xhigh,https://artificialanalysis.ai/leaderboards/models,2026-10-25
+qwen3-5-122b-a10b,aa-index,16,,https://artificialanalysis.ai/leaderboards/models,2026-10-25
+gemini-4-argon,lmarena-text,1532,,https://metatext.io/benchmarks/lmarena-elo,
+claude-opus-5-5,lmarena-text,1516,,https://metatext.io/benchmarks/lmarena-elo,
+muse-spark,lmarena-text,1474,,https://metatext.io/benchmarks/lmarena-elo,
+deepseek-v4-pro,lmarena-text,1451,0423,https://metatext.io/benchmarks/lmarena-elo,
+gpt-6-astra,lmarena-text,1441,,https://metatext.io/benchmarks/lmarena-elo,
+deepseek-v4-flash,lmarena-text,1432,0423,https://metatext.io/benchmarks/lmarena-elo,
+qwen3-5-122b-a10b,lmarena-text,1417,,https://metatext.io/benchmarks/lmarena-elo,
+grok-4-7,lmarena-text,1399,,https://metatext.io/benchmarks/lmarena-elo,
+llama-3-1-8b-instruct,lmarena-text,1187,,https://metatext.io/benchmarks/lmarena-elo,

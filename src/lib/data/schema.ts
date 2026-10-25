@@ -1,5 +1,6 @@
 import { z } from "zod";
 import {
+  FLOW_KINDS,
   LAB_TYPES,
   MODALITIES,
   OPENNESS,
@@ -58,12 +59,40 @@ export const placeSchema = z.object({
   checked,
 });
 
+/** "models;research" → ["models", "research"]. The first tag is the main one. */
+const tagList = z.preprocess(
+  (value) => (typeof value === "string" ? value.split(";").map((tag) => tag.trim()).filter(Boolean) : value),
+  z.array(z.enum(TAG_IDS)).min(1, "at least one tag"),
+);
+
 export const eventSchema = z.object({
   id: slug,
   date: partialDate,
   title: z.string().min(1),
-  tag: z.enum(TAG_IDS),
+  tags: tagList,
   source: url,
+  checked,
+});
+
+/** A link of the supply chain between two rows of places.csv. */
+export const flowSchema = z.object({
+  id: slug,
+  from_id: slug,
+  to_id: slug,
+  kind: z.enum(FLOW_KINDS),
+  label: z.string().min(1),
+  source: url,
+  checked,
+});
+
+/** One score of one model on one benchmark (benchmarks are declared in src/config/benchmarks.ts). */
+export const benchmarkScoreSchema = z.object({
+  model_id: slug,
+  benchmark: slug,
+  score: z.coerce.number(),
+  variant: optionalText,
+  source: url,
+  checked,
 });
 
 export const modelSchema = z.object({
@@ -99,3 +128,5 @@ export type Place = z.infer<typeof placeSchema>;
 export type TimelineEvent = z.infer<typeof eventSchema>;
 export type Model = z.infer<typeof modelSchema>;
 export type Country = z.infer<typeof countrySchema>;
+export type Flow = z.infer<typeof flowSchema>;
+export type BenchmarkScore = z.infer<typeof benchmarkScoreSchema>;
