@@ -1,0 +1,10 @@
+id,name,lab_id,family,modality,openness,license,released,params_total_b,params_active_b,context_tokens,price_in_usd_per_mtok,price_out_usd_per_mtok,note,source,checked
+gpt-6-astra,GPT-6 Astra,openai,GPT,language,closed,,2026-09-03,,,,10,50,,https://openai.com/index/gpt-6-astra/,2026-10-25
+claude-opus-5-5,Claude Opus 5.5,anthropic,Claude,language,closed,,,,,,,,,https://www.anthropic.com/claude,
+gemini-4-argon,Gemini 4 Argon,google-deepmind,Gemini,language,closed,,2026-09-30,,,,2,10,Introductory price.,https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/,2026-10-25
+grok-4-7,Grok 4.7,xai,Grok,language,closed,,2026-09-21,,,,,,,https://media.x.ai/v1/website/card4p7-3a96f40b.pdf,2026-10-25
+muse-spark,Muse Spark,meta,Muse,language,closed,,2026-04-09,,,,,,,https://datanorth.ai/news/meta-releases-muse-spark-first-model-from-superintelligence-labs,2026-10-25
+deepseek-v4-pro,DeepSeek V4 Pro,deepseek,DeepSeek,language,open-weights,,2026-04-24,1600,49,1000000,,,Mixture of experts.,https://rits.shanghai.nyu.edu/ai/deepseek-releases-v4-open-source-1-6t-moe-with-1m-context,2026-10-25
+deepseek-v4-flash,DeepSeek V4 Flash,deepseek,DeepSeek,language,open-weights,,2026-04-24,284,13,1000000,,,Mixture of experts.,https://rits.shanghai.nyu.edu/ai/deepseek-releases-v4-open-source-1-6t-moe-with-1m-context,2026-10-25
+qwen3-5-122b-a10b,Qwen3.5-122B-A10B,alibaba-qwen,Qwen,language,open-weights,,,122,10,,,,Mixture of experts.,https://huggingface.co/Qwen,
+llama-3-1-8b-instruct,Llama 3.1 8B Instruct,meta,Llama,language,open-weights,Llama 3.1 Community License,2024-07-23,8.03,8.03,131072,,,Running example of the wiki.,https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct,2026-10-25

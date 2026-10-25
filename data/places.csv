@@ -1,0 +1,12 @@
+id,name,type,owner,city,country,lat,lon,status,capacity_mw,note,source,checked
+stargate-abilene,Stargate Abilene,datacenter,OpenAI and Oracle,Abilene,US,32.4487,-99.7331,operational,,First site of the Stargate programme; expansion ongoing.,https://en.wikipedia.org/wiki/Stargate_LLC,
+colossus,Colossus,datacenter,xAI,Memphis,US,35.06,-90.09,operational,,Built in a former factory; running since 2024.,https://en.wikipedia.org/wiki/Colossus_(supercomputer),
+prometheus,Prometheus,datacenter,Meta,New Albany,US,40.0812,-82.8088,construction,1000,Announced as a 1 GW cluster coming online in 2026.,https://techcrunch.com/2025/07/14/mark-zuckerberg-says-meta-is-building-a-5gw-ai-data-center,
+hyperion,Hyperion,datacenter,Meta,Richland Parish,US,32.4,-91.75,construction,5000,Announced as able to scale to 5 GW over several years.,https://techcrunch.com/2025/07/14/mark-zuckerberg-says-meta-is-building-a-5gw-ai-data-center,
+fairwater,Fairwater,datacenter,Microsoft,Mount Pleasant,US,42.7,-87.9,operational,,Presented by Microsoft as its most powerful AI datacenter.,https://blogs.microsoft.com/on-the-issues/?p=67180,
+nvidia,NVIDIA,chip-design,NVIDIA,Santa Clara,US,37.3708,-121.9637,operational,,Designs most AI training GPUs; manufacturing is outsourced.,https://en.wikipedia.org/wiki/Nvidia,
+tsmc-hsinchu,TSMC,fab,TSMC,Hsinchu,TW,24.7739,121.0109,operational,,Manufactures most advanced AI chips.,https://en.wikipedia.org/wiki/TSMC,
+asml,ASML,equipment,ASML,Veldhoven,NL,51.4085,5.4106,operational,,Only maker of EUV lithography machines.,https://en.wikipedia.org/wiki/ASML_Holding,
+sk-hynix,SK hynix,memory,SK hynix,Icheon,KR,37.2367,127.4569,operational,,Major supplier of HBM memory for AI GPUs.,https://en.wikipedia.org/wiki/SK_Hynix,
+samsung-pyeongtaek,Samsung Pyeongtaek,memory,Samsung Electronics,Pyeongtaek,KR,37.0216,127.043,operational,,Memory and foundry campus.,https://en.wikipedia.org/wiki/Samsung_Electronics,
+micron,Micron,memory,Micron Technology,Boise,US,43.5296,-116.1458,operational,,US memory maker (DRAM and HBM).,https://en.wikipedia.org/wiki/Micron_Technology,

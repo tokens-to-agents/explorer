@@ -1,0 +1,13 @@
+id,name,country,city,lat,lon,type,founded,url,source,checked
+openai,OpenAI,US,San Francisco,37.7749,-122.4194,frontier,2015,https://openai.com,https://en.wikipedia.org/wiki/OpenAI,
+anthropic,Anthropic,US,San Francisco,37.7895,-122.394,frontier,2021,https://www.anthropic.com,https://en.wikipedia.org/wiki/Anthropic,
+google-deepmind,Google DeepMind,GB,London,51.5333,-0.1259,frontier,2010,https://deepmind.google,https://en.wikipedia.org/wiki/Google_DeepMind,
+meta,Meta Superintelligence Labs,US,Menlo Park,37.4848,-122.1484,frontier,,https://ai.meta.com,https://datanorth.ai/news/meta-releases-muse-spark-first-model-from-superintelligence-labs,
+xai,xAI,US,Palo Alto,37.4419,-122.143,frontier,2023,https://x.ai,https://en.wikipedia.org/wiki/XAI_(company),
+mistral,Mistral AI,FR,Paris,48.8566,2.3522,open-weight,2023,https://mistral.ai,https://en.wikipedia.org/wiki/Mistral_AI,
+deepseek,DeepSeek,CN,Hangzhou,30.2741,120.1551,open-weight,2023,https://www.deepseek.com,https://en.wikipedia.org/wiki/DeepSeek,
+alibaba-qwen,Alibaba (Qwen),CN,Hangzhou,30.2936,120.028,open-weight,,https://qwen.ai,https://en.wikipedia.org/wiki/Qwen,
+moonshot,Moonshot AI (Kimi),CN,Beijing,39.9897,116.3072,open-weight,2023,https://www.moonshot.ai,https://en.wikipedia.org/wiki/Moonshot_AI,
+zai,Z.ai (Zhipu),CN,Beijing,39.99,116.33,open-weight,2019,https://z.ai,https://en.wikipedia.org/wiki/Zhipu_AI,
+minimax,MiniMax,CN,Shanghai,31.2304,121.4737,open-weight,2021,https://www.minimax.io,https://en.wikipedia.org/wiki/MiniMax_(company),
+ami-labs,AMI Labs,FR,Paris,48.87,2.34,research,,,https://technologyreview.com/2026/01/22/1131661/yann-lecuns-new-venture-ami-labs,2026-10-25

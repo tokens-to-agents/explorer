@@ -1,0 +1,33 @@
+iso_numeric,name,regulation,note,source,checked
+040,Austria,comprehensive,EU AI Act (Regulation (EU) 2024/1689); obligations phased in from 2025.,https://eur-lex.europa.eu/eli/reg/2024/1689/oj,2026-10-25
+056,Belgium,comprehensive,EU AI Act (Regulation (EU) 2024/1689); obligations phased in from 2025.,https://eur-lex.europa.eu/eli/reg/2024/1689/oj,2026-10-25
+100,Bulgaria,comprehensive,EU AI Act (Regulation (EU) 2024/1689); obligations phased in from 2025.,https://eur-lex.europa.eu/eli/reg/2024/1689/oj,2026-10-25
+191,Croatia,comprehensive,EU AI Act (Regulation (EU) 2024/1689); obligations phased in from 2025.,https://eur-lex.europa.eu/eli/reg/2024/1689/oj,2026-10-25
+196,Cyprus,comprehensive,EU AI Act (Regulation (EU) 2024/1689); obligations phased in from 2025.,https://eur-lex.europa.eu/eli/reg/2024/1689/oj,2026-10-25
+203,Czechia,comprehensive,EU AI Act (Regulation (EU) 2024/1689); obligations phased in from 2025.,https://eur-lex.europa.eu/eli/reg/2024/1689/oj,2026-10-25
+208,Denmark,comprehensive,EU AI Act (Regulation (EU) 2024/1689); obligations phased in from 2025.,https://eur-lex.europa.eu/eli/reg/2024/1689/oj,2026-10-25
+233,Estonia,comprehensive,EU AI Act (Regulation (EU) 2024/1689); obligations phased in from 2025.,https://eur-lex.europa.eu/eli/reg/2024/1689/oj,2026-10-25
+246,Finland,comprehensive,EU AI Act (Regulation (EU) 2024/1689); obligations phased in from 2025.,https://eur-lex.europa.eu/eli/reg/2024/1689/oj,2026-10-25
+250,France,comprehensive,EU AI Act (Regulation (EU) 2024/1689); obligations phased in from 2025.,https://eur-lex.europa.eu/eli/reg/2024/1689/oj,2026-10-25
+276,Germany,comprehensive,EU AI Act (Regulation (EU) 2024/1689); obligations phased in from 2025.,https://eur-lex.europa.eu/eli/reg/2024/1689/oj,2026-10-25
+300,Greece,comprehensive,EU AI Act (Regulation (EU) 2024/1689); obligations phased in from 2025.,https://eur-lex.europa.eu/eli/reg/2024/1689/oj,2026-10-25
+348,Hungary,comprehensive,EU AI Act (Regulation (EU) 2024/1689); obligations phased in from 2025.,https://eur-lex.europa.eu/eli/reg/2024/1689/oj,2026-10-25
+372,Ireland,comprehensive,EU AI Act (Regulation (EU) 2024/1689); obligations phased in from 2025.,https://eur-lex.europa.eu/eli/reg/2024/1689/oj,2026-10-25
+380,Italy,comprehensive,EU AI Act (Regulation (EU) 2024/1689); obligations phased in from 2025.,https://eur-lex.europa.eu/eli/reg/2024/1689/oj,2026-10-25
+428,Latvia,comprehensive,EU AI Act (Regulation (EU) 2024/1689); obligations phased in from 2025.,https://eur-lex.europa.eu/eli/reg/2024/1689/oj,2026-10-25
+440,Lithuania,comprehensive,EU AI Act (Regulation (EU) 2024/1689); obligations phased in from 2025.,https://eur-lex.europa.eu/eli/reg/2024/1689/oj,2026-10-25
+442,Luxembourg,comprehensive,EU AI Act (Regulation (EU) 2024/1689); obligations phased in from 2025.,https://eur-lex.europa.eu/eli/reg/2024/1689/oj,2026-10-25
+470,Malta,comprehensive,EU AI Act (Regulation (EU) 2024/1689); obligations phased in from 2025.,https://eur-lex.europa.eu/eli/reg/2024/1689/oj,2026-10-25
+528,Netherlands,comprehensive,EU AI Act (Regulation (EU) 2024/1689); obligations phased in from 2025.,https://eur-lex.europa.eu/eli/reg/2024/1689/oj,2026-10-25
+616,Poland,comprehensive,EU AI Act (Regulation (EU) 2024/1689); obligations phased in from 2025.,https://eur-lex.europa.eu/eli/reg/2024/1689/oj,2026-10-25
+620,Portugal,comprehensive,EU AI Act (Regulation (EU) 2024/1689); obligations phased in from 2025.,https://eur-lex.europa.eu/eli/reg/2024/1689/oj,2026-10-25
+642,Romania,comprehensive,EU AI Act (Regulation (EU) 2024/1689); obligations phased in from 2025.,https://eur-lex.europa.eu/eli/reg/2024/1689/oj,2026-10-25
+703,Slovakia,comprehensive,EU AI Act (Regulation (EU) 2024/1689); obligations phased in from 2025.,https://eur-lex.europa.eu/eli/reg/2024/1689/oj,2026-10-25
+705,Slovenia,comprehensive,EU AI Act (Regulation (EU) 2024/1689); obligations phased in from 2025.,https://eur-lex.europa.eu/eli/reg/2024/1689/oj,2026-10-25
+724,Spain,comprehensive,EU AI Act (Regulation (EU) 2024/1689); obligations phased in from 2025.,https://eur-lex.europa.eu/eli/reg/2024/1689/oj,2026-10-25
+752,Sweden,comprehensive,EU AI Act (Regulation (EU) 2024/1689); obligations phased in from 2025.,https://eur-lex.europa.eu/eli/reg/2024/1689/oj,2026-10-25
+156,China,targeted,Binding rules on recommendation algorithms; deep synthesis and generative AI; labelling of AI content.,https://en.wikipedia.org/wiki/Regulation_of_artificial_intelligence,
+840,United States,none-federal,No federal AI law; executive actions and state laws.,https://en.wikipedia.org/wiki/Regulation_of_artificial_intelligence,
+826,United Kingdom,principles,Principles applied through existing regulators; no AI-specific law.,https://en.wikipedia.org/wiki/Regulation_of_artificial_intelligence,
+410,South Korea,comprehensive,AI Basic Act; in force since January 2026.,https://en.wikipedia.org/wiki/Regulation_of_artificial_intelligence,
+392,Japan,principles,AI Promotion Act (2025); non-binding.,https://en.wikipedia.org/wiki/Regulation_of_artificial_intelligence,

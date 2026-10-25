@@ -1,0 +1,39 @@
+id,date,title,tag,source
+artificial-neuron,1943,McCulloch and Pitts describe the first artificial neuron,research,https://en.wikipedia.org/wiki/Artificial_neuron
+turing-test,1950-10,Turing proposes the imitation game,research,https://en.wikipedia.org/wiki/Computing_Machinery_and_Intelligence
+dartmouth,1956,The Dartmouth workshop names the field artificial intelligence,research,https://en.wikipedia.org/wiki/Dartmouth_workshop
+perceptron,1958,Rosenblatt builds the perceptron,research,https://en.wikipedia.org/wiki/Perceptron
+perceptrons-book,1969,Minsky and Papert publish Perceptrons and show its limits,research,https://en.wikipedia.org/wiki/Perceptrons_(book)
+lighthill,1973,The Lighthill report leads the UK to cut AI funding,policy,https://en.wikipedia.org/wiki/Lighthill_report
+backprop,1986-10,"Rumelhart, Hinton and Williams popularise backpropagation",research,https://www.nature.com/articles/323533a0
+second-winter,1987,The expert-system market collapses: second AI winter,companies,https://en.wikipedia.org/wiki/AI_winter
+deep-blue,1997-05-11,Deep Blue beats Garry Kasparov at chess,models,https://en.wikipedia.org/wiki/Deep_Blue_versus_Garry_Kasparov
+lstm,1997-11,Hochreiter and Schmidhuber publish LSTM,research,https://en.wikipedia.org/wiki/Long_short-term_memory
+imagenet,2009,The ImageNet dataset is released,research,https://en.wikipedia.org/wiki/ImageNet
+alexnet,2012-09,AlexNet wins ImageNet with a GPU-trained network,research,https://en.wikipedia.org/wiki/AlexNet
+openai-founded,2015-12-11,OpenAI is founded,companies,https://en.wikipedia.org/wiki/OpenAI
+alphago,2016-03,AlphaGo beats Lee Sedol at Go,models,https://en.wikipedia.org/wiki/AlphaGo_versus_Lee_Sedol
+transformer,2017-06,Attention Is All You Need introduces the transformer,research,https://arxiv.org/abs/1706.03762
+bert,2018-10,Google releases BERT,models,https://arxiv.org/abs/1810.04805
+scaling-laws,2020-01,Scaling laws for language models are published,research,https://arxiv.org/abs/2001.08361
+gpt-3,2020-05,OpenAI presents GPT-3,models,https://arxiv.org/abs/2005.14165
+alphafold-2,2020-11,AlphaFold 2 solves protein structure prediction at CASP14,research,https://en.wikipedia.org/wiki/AlphaFold
+anthropic-founded,2021,Anthropic is founded,companies,https://en.wikipedia.org/wiki/Anthropic
+stable-diffusion,2022-08-22,Stable Diffusion is released with open weights,models,https://en.wikipedia.org/wiki/Stable_Diffusion
+chatgpt,2022-11-30,OpenAI launches ChatGPT,products,https://openai.com/index/chatgpt/
+llama,2023-02-24,Meta releases LLaMA,models,https://arxiv.org/abs/2302.13971
+gpt-4,2023-03-14,OpenAI releases GPT-4,models,https://openai.com/index/gpt-4-research/
+eu-ai-act-agreement,2023-12-08,EU institutions reach a political agreement on the AI Act,policy,https://en.wikipedia.org/wiki/Artificial_Intelligence_Act
+o1,2024-09-12,OpenAI o1 introduces trained reasoning,models,https://openai.com/index/learning-to-reason-with-llms/
+mcp,2024-11-25,Anthropic publishes the Model Context Protocol,products,https://www.anthropic.com/news/model-context-protocol
+deepseek-r1,2025-01-20,DeepSeek R1 brings open-weight reasoning,models,https://arxiv.org/abs/2501.12948
+stargate,2025-01-21,The Stargate data center programme is announced,compute,https://en.wikipedia.org/wiki/Stargate_LLC
+openclaw,2026-01-30,The open-source personal agent takes the name OpenClaw,products,https://catalaize.substack.com/p/openclaw-from-viral-prototype-to
+muse-spark,2026-04-09,"Meta launches Muse Spark, a closed model",models,https://datanorth.ai/news/meta-releases-muse-spark-first-model-from-superintelligence-labs
+deepseek-v4,2026-04-24,DeepSeek releases V4 with open weights,models,https://rits.shanghai.nyu.edu/ai/deepseek-releases-v4-open-source-1-6t-moe-with-1m-context
+ai-act-omnibus,2026-05-07,EU agreement to delay high-risk obligations of the AI Act,policy,https://datamatters.sidley.com/2026/06/22/eu-lawmakers-reach-provisional-agreement-to-delay-key-eu-ai-act-obligations/
+gpt-6-astra,2026-09-03,OpenAI announces GPT-6 Astra,models,https://openai.com/index/gpt-6-astra/
+jev,2026-09-15,"TypeSafe AI launches Jev, a decision model",models,https://www.blogdumoderateur.com/jev-modele-ia/
+gemini-4-argon,2026-09-30,Google announces Gemini 4 Argon,models,https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/
+hermes-funding,2026-10-07,Nous Research raises $90M for Hermes Agent,companies,https://thenextweb.com/news/nous-research-90m-1-5bn-hermes-agent-wsj
+aaif-projects,2026-10-22,Agent Skills and Open Responses join the Agentic AI Foundation,products,https://aaif.io/news/agentic-ai-foundation-announces-four-new-projects
