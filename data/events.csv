@@ -1,42 +1,86 @@
 id,date,title,tags,source,checked
-artificial-neuron,1943,McCulloch and Pitts describe the first artificial neuron,research,https://en.wikipedia.org/wiki/Artificial_neuron,
+artificial-neuron,1943,McCulloch and Pitts describe the first artificial neuron,research,https://en.wikipedia.org/wiki/Artificial_neuron,2026-10-26
 turing-test,1950-10,Turing proposes the imitation game,research,https://en.wikipedia.org/wiki/Computing_Machinery_and_Intelligence,
-dartmouth,1956,The Dartmouth workshop names the field artificial intelligence,research,https://en.wikipedia.org/wiki/Dartmouth_workshop,
-perceptron,1958,Rosenblatt builds the perceptron,research,https://en.wikipedia.org/wiki/Perceptron,
-perceptrons-book,1969,Minsky and Papert publish Perceptrons and show its limits,research,https://en.wikipedia.org/wiki/Perceptrons_(book),
-lighthill,1973,The Lighthill report leads the UK to cut AI funding,policy;funding,https://en.wikipedia.org/wiki/Lighthill_report,
-backprop,1986-10,"Rumelhart, Hinton and Williams popularise backpropagation",research,https://www.nature.com/articles/323533a0,
-second-winter,1987,The expert-system market collapses: second AI winter,companies;funding,https://en.wikipedia.org/wiki/AI_winter,
-deep-blue,1997-05-11,Deep Blue beats Garry Kasparov at chess,models;research,https://en.wikipedia.org/wiki/Deep_Blue_versus_Garry_Kasparov,
+dartmouth,1956,The Dartmouth workshop names the field artificial intelligence,research,https://en.wikipedia.org/wiki/Dartmouth_workshop,2026-10-26
+perceptron,1958,Rosenblatt builds the perceptron,research,https://en.wikipedia.org/wiki/Perceptron,2026-10-26
+eliza,1966-01,"Weizenbaum publishes ELIZA, a program that talks like a therapist",research;products,https://en.wikipedia.org/wiki/ELIZA,2026-10-26
+perceptrons-book,1969,Minsky and Papert publish Perceptrons and show its limits,research,https://en.wikipedia.org/wiki/Perceptrons_(book),2026-10-26
+mycin,1972,"Work starts at Stanford on MYCIN, an expert system for blood infections",research,https://www.britannica.com/technology/MYCIN,2026-10-26
+lighthill,1973,The Lighthill report leads the UK to cut AI funding,policy;funding,https://en.wikipedia.org/wiki/Lighthill_report,2026-10-26
+xcon,1980,DEC puts the XCON expert system into daily use,companies;products,https://en.wikipedia.org/wiki/Xcon,2026-10-26
+fifth-generation,1982,Japan launches the Fifth Generation computer project,policy;funding,https://en.wikipedia.org/wiki/Timeline_of_artificial_intelligence,2026-10-26
+backprop,1986-10,"Rumelhart, Hinton and Williams popularise backpropagation",research,https://www.nature.com/articles/323533a0,2026-10-26
+second-winter,1987,The expert-system market collapses: second AI winter,companies;funding,https://en.wikipedia.org/wiki/AI_winter,2026-10-26
+svm,1995,Cortes and Vapnik publish support-vector machines,research,https://en.wikipedia.org/wiki/Timeline_of_machine_learning,2026-10-26
+deep-blue,1997-05-11,Deep Blue beats Garry Kasparov at chess,models;research,https://en.wikipedia.org/wiki/Deep_Blue_versus_Garry_Kasparov,2026-10-26
 lstm,1997-11,Hochreiter and Schmidhuber publish LSTM,research,https://en.wikipedia.org/wiki/Long_short-term_memory,
-imagenet,2009,The ImageNet dataset is released,research,https://en.wikipedia.org/wiki/ImageNet,
-alexnet,2012-09,AlexNet wins ImageNet with a GPU-trained network,research;compute,https://en.wikipedia.org/wiki/AlexNet,
-openai-founded,2015-12-11,OpenAI is founded,companies;funding,https://en.wikipedia.org/wiki/OpenAI,
-alphago,2016-03,AlphaGo beats Lee Sedol at Go,models;research,https://en.wikipedia.org/wiki/AlphaGo_versus_Lee_Sedol,
+deep-belief-nets,2006,Hinton shows how to train deep networks one layer at a time,research,https://www.cs.utoronto.ca/~hinton/absps/ncfast.pdf,2026-10-26
+netflix-prize,2006,Netflix launches a prize for a 10% better recommendation system,research;companies,https://en.wikipedia.org/wiki/Timeline_of_machine_learning,2026-10-26
+cuda,2007-02-15,"NVIDIA releases CUDA, which lets programs run any computation on GPUs",compute;products,https://en.wikipedia.org/wiki/CUDA,2026-10-26
+imagenet,2009,The ImageNet dataset is released,research,https://en.wikipedia.org/wiki/ImageNet,2026-10-26
+gpu-training,2009,GPUs train neural networks up to 70 times faster than a CPU,research;compute,https://andrewng.org/publications/large-scale-deep-unsupervised-learning-using-graphics-processors/,2026-10-26
+watson,2011-02-14,IBM Watson beats two champions at Jeopardy!,models;research,https://en.wikipedia.org/wiki/IBM_Watson,2026-10-26
+google-cat,2012-06,A Google network learns to recognise cats from unlabelled YouTube videos,research;compute,https://www.wkms.org/2012-06-26/a-massive-google-network-learns-to-identify-cats,2026-10-26
+alexnet,2012-09,AlexNet wins ImageNet with a GPU-trained network,research;compute,https://en.wikipedia.org/wiki/AlexNet,2026-10-26
+word2vec,2013,Google's word2vec turns words into lists of numbers,research,https://en.wikipedia.org/wiki/Timeline_of_machine_learning,2026-10-26
+deepmind-acquired,2014-01-26,Google acquires DeepMind,companies;funding,https://en.wikipedia.org/wiki/Google_DeepMind,2026-10-26
+gan,2014-06,Goodfellow and colleagues introduce generative adversarial networks,research,https://en.wikipedia.org/wiki/Generative_adversarial_network,2026-10-26
+resnet,2015,ResNet wins ImageNet with a much deeper network,research,https://en.wikipedia.org/wiki/Residual_neural_network,2026-10-26
+tensorflow,2015-11-09,Google open-sources TensorFlow,products,https://research.google/blog/tensorflow-googles-latest-machine-learning-system-open-sourced-for-everyone/,2026-10-26
+openai-founded,2015-12,OpenAI is founded,companies;funding,https://en.wikipedia.org/wiki/OpenAI,2026-10-26
+alphago,2016-03,AlphaGo beats Lee Sedol at Go,models;research,https://en.wikipedia.org/wiki/AlphaGo_versus_Lee_Sedol,2026-10-26
+gnmt,2016-11,Google Translate switches to a neural network,products;research,https://en.wikipedia.org/wiki/Google_Neural_Machine_Translation,2026-10-26
 transformer,2017-06,Attention Is All You Need introduces the transformer,research,https://arxiv.org/abs/1706.03762,2026-10-25
-bert,2018-10,Google releases BERT,models;research,https://arxiv.org/abs/1810.04805,
+gpt-1,2018-06-11,OpenAI presents GPT-1,models;research,https://en.wikipedia.org/wiki/List_of_large_language_models,2026-10-26
+bert,2018-10,Google releases BERT,models;research,https://arxiv.org/abs/1810.04805,2026-10-26
+gpt-2,2019-02-14,OpenAI announces GPT-2 and holds back the full model,models;safety,https://en.wikipedia.org/wiki/GPT-2,2026-10-26
 scaling-laws,2020-01,Scaling laws for language models are published,research;compute,https://arxiv.org/abs/2001.08361,2026-10-25
 gpt-3,2020-05,OpenAI presents GPT-3,models;research,https://arxiv.org/abs/2005.14165,2026-10-25
-alphafold-2,2020-11,AlphaFold 2 solves protein structure prediction at CASP14,research;models,https://en.wikipedia.org/wiki/AlphaFold,
+alphafold-2,2020-11,AlphaFold 2 solves protein structure prediction at CASP14,research;models,https://en.wikipedia.org/wiki/AlphaFold,2026-10-26
 anthropic-founded,2021,Anthropic is founded,companies;safety,https://en.wikipedia.org/wiki/Anthropic,
+dall-e,2021-01-05,OpenAI presents DALL·E and CLIP,models;research,https://en.wikipedia.org/wiki/DALL-E,2026-10-26
 instructgpt,2022-01-27,OpenAI trains InstructGPT with human feedback (RLHF),research;models,https://openai.com/index/instruction-following/,2026-10-25
+dall-e-2,2022-04-06,OpenAI announces DALL·E 2,models;products,https://en.wikipedia.org/wiki/DALL-E,2026-10-26
+midjourney,2022-07-12,Midjourney opens its image generator to everyone,products;models,https://en.wikipedia.org/wiki/Midjourney,2026-10-26
 stable-diffusion,2022-08-22,Stable Diffusion is released with open weights,models,https://en.wikipedia.org/wiki/Stable_Diffusion,
 chatgpt,2022-11-30,OpenAI launches ChatGPT,products;models,https://openai.com/index/chatgpt/,2026-10-25
-llama,2023-02-24,Meta releases LLaMA,models,https://arxiv.org/abs/2302.13971,
-gpt-4,2023-03-14,OpenAI releases GPT-4,models;products,https://openai.com/index/gpt-4-research/,
+microsoft-openai-10b,2023-01-23,Microsoft announces a further $10B investment in OpenAI,funding;companies,https://en.wikipedia.org/wiki/OpenAI,2026-10-26
+llama,2023-02-24,Meta releases LLaMA,models,https://arxiv.org/abs/2302.13971,2026-10-26
+pause-letter,2023-03,An open letter asks labs to pause training systems beyond GPT-4,safety,https://en.wikipedia.org/wiki/Pause_Giant_AI_Experiments:_An_Open_Letter,2026-10-26
+gpt-4,2023-03-14,OpenAI releases GPT-4,models;products,https://openai.com/index/gpt-4-research/,2026-10-26
+claude,2023-03-14,Anthropic releases Claude,models;products,https://en.wikipedia.org/wiki/2023_in_artificial_intelligence,2026-10-26
+ai-risk-statement,2023-05-30,Hundreds of experts sign a one-line statement on extinction risk from AI,safety,https://en.wikipedia.org/wiki/2023_in_artificial_intelligence,2026-10-26
+llama-2,2023-07-18,Meta and Microsoft release Llama 2,models,https://en.wikipedia.org/wiki/2023_in_artificial_intelligence,2026-10-26
+mistral-7b,2023-09-27,Mistral AI releases Mistral 7B under Apache 2.0,models;companies,https://en.wikipedia.org/wiki/Mistral_AI,2026-10-26
+us-executive-order,2023-10-30,Biden signs Executive Order 14110 on AI,policy;safety,https://en.wikipedia.org/wiki/2023_in_artificial_intelligence,2026-10-26
+bletchley,2023-11-01,28 countries sign the Bletchley Declaration on AI safety,policy;safety,https://en.wikipedia.org/wiki/AI_Safety_Summit_2023,2026-10-26
+openai-board,2023-11-17,"OpenAI's board removes Sam Altman, who returns days later",companies;safety,https://en.wikipedia.org/wiki/OpenAI,2026-10-26
+gemini,2023-12-06,Google DeepMind introduces Gemini,models,https://en.wikipedia.org/wiki/2023_in_artificial_intelligence,2026-10-26
 eu-ai-act-agreement,2023-12-08,EU institutions reach a political agreement on the AI Act,policy;safety,https://en.wikipedia.org/wiki/Artificial_Intelligence_Act,
+sora,2024-02-15,"OpenAI previews Sora, a text-to-video model",models,https://en.wikipedia.org/wiki/2024_in_artificial_intelligence,2026-10-26
+eu-ai-act-in-force,2024-08-01,The EU AI Act enters into force,policy,https://en.wikipedia.org/wiki/2024_in_artificial_intelligence,2026-10-26
 o1,2024-09-12,OpenAI o1 introduces trained reasoning,models;research,https://openai.com/index/learning-to-reason-with-llms/,2026-10-25
+nobel-2024,2024-10-08,"Nobel prizes go to Hopfield and Hinton, then Hassabis and Jumper, for AI work",research,https://en.wikipedia.org/wiki/2024_in_artificial_intelligence,2026-10-26
+computer-use,2024-10-22,"Claude starts using a computer's screen, mouse and keyboard",products;models,https://techcrunch.com/2024/10/22/anthropics-new-ai-can-control-your-pc/,2026-10-26
 mcp,2024-11-25,Anthropic publishes the Model Context Protocol,products,https://www.anthropic.com/news/model-context-protocol,2026-10-25
 deepseek-r1,2025-01-20,DeepSeek R1 brings open-weight reasoning,models;research,https://deepseek.com/en/news/deepseek-r1/,2026-10-25
-stargate,2025-01-21,The Stargate data center programme is announced,compute;funding;companies,https://en.wikipedia.org/wiki/Stargate_LLC,
+stargate,2025-01-21,The Stargate data center programme is announced,compute;funding;companies,https://en.wikipedia.org/wiki/Stargate_LLC,2026-10-26
+nvidia-drop,2025-01-27,NVIDIA shares fall about 17% after DeepSeek R1,compute;funding,https://en.wikipedia.org/wiki/2025_in_artificial_intelligence,2026-10-26
+paris-summit,2025-02-10,Paris AI Action Summit; the US and UK do not sign the declaration,policy,https://en.wikipedia.org/wiki/2025_in_artificial_intelligence,2026-10-26
 metr-time-horizons,2025-03-18,METR finds the length of tasks AI agents complete doubles about every seven months,research,https://arxiv.org/abs/2503.14499,2026-10-25
 claude-code,2025-05,Claude Code becomes generally available,products,https://en.wikipedia.org/wiki/Claude_(language_model),2026-10-25
+imo-gold,2025-07,Models from OpenAI and Google DeepMind reach gold-medal level at the Math Olympiad,research;models,https://en.wikipedia.org/wiki/2025_in_artificial_intelligence,2026-10-26
+gpai-obligations,2025-08-02,EU AI Act rules for general-purpose models start to apply,policy,https://en.wikipedia.org/wiki/2025_in_artificial_intelligence,2026-10-26
 genie-3,2025-08-05,"Google DeepMind presents Genie 3, a real-time world model",models;research,https://techcrunch.com/2025/08/05/deepmind-reveals-genie-3-a-world-model-that-could-be-the-key-to-reaching-agi,2026-10-25
+gpt-5,2025-08-07,OpenAI releases GPT-5,models,https://en.wikipedia.org/wiki/2025_in_artificial_intelligence,2026-10-26
+aaif-founded,2025-12-09,"The Agentic AI Foundation is formed around MCP, goose and AGENTS.md",companies;products,https://www.linuxfoundation.org/press/linux-foundation-announces-the-formation-of-the-agentic-ai-foundation,2026-10-26
 openclaw,2026-01-30,The open-source personal agent takes the name OpenClaw,products,https://catalaize.substack.com/p/openclaw-from-viral-prototype-to,2026-10-25
 ami-labs,2026-03-10,AMI Labs raises $1.03B to build world models,companies;funding,https://thenextweb.com/news/yann-lecun-ami-labs-world-models-billion,2026-10-25
 muse-spark,2026-04-09,"Meta launches Muse Spark, a closed model",models;companies,https://datanorth.ai/news/meta-releases-muse-spark-first-model-from-superintelligence-labs,
 deepseek-v4,2026-04-24,DeepSeek releases V4 with open weights,models,https://rits.shanghai.nyu.edu/ai/deepseek-releases-v4-open-source-1-6t-moe-with-1m-context,
 ai-act-omnibus,2026-05-07,EU agreement to delay high-risk obligations of the AI Act,policy,https://datamatters.sidley.com/2026/06/22/eu-lawmakers-reach-provisional-agreement-to-delay-key-eu-ai-act-obligations/,
+fable-mythos,2026-06-09,Anthropic releases Claude Fable 5 and Claude Mythos 5,models,https://www.casrai.org/news/anthropic-fable-mythos-export-control-suspension,2026-10-26
+fable-export-controls,2026-06-12,US export controls suspend access to Fable 5 and Mythos 5 until 1 July,policy;safety,https://www.casrai.org/news/anthropic-fable-mythos-export-control-suspension,2026-10-26
 gpt-6-astra,2026-09-03,OpenAI announces GPT-6 Astra,models,https://openai.com/index/gpt-6-astra/,
 jev,2026-09-15,"TypeSafe AI launches Jev, a decision model",models,https://www.blogdumoderateur.com/jev-modele-ia/,2026-10-25
 gemini-4-argon,2026-09-30,Google announces Gemini 4 Argon,models,https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/,
