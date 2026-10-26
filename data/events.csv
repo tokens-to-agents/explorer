@@ -13,27 +13,32 @@ imagenet,2009,The ImageNet dataset is released,research,https://en.wikipedia.org
 alexnet,2012-09,AlexNet wins ImageNet with a GPU-trained network,research;compute,https://en.wikipedia.org/wiki/AlexNet,
 openai-founded,2015-12-11,OpenAI is founded,companies;funding,https://en.wikipedia.org/wiki/OpenAI,
 alphago,2016-03,AlphaGo beats Lee Sedol at Go,models;research,https://en.wikipedia.org/wiki/AlphaGo_versus_Lee_Sedol,
-transformer,2017-06,Attention Is All You Need introduces the transformer,research,https://arxiv.org/abs/1706.03762,
+transformer,2017-06,Attention Is All You Need introduces the transformer,research,https://arxiv.org/abs/1706.03762,2026-10-25
 bert,2018-10,Google releases BERT,models;research,https://arxiv.org/abs/1810.04805,
-scaling-laws,2020-01,Scaling laws for language models are published,research;compute,https://arxiv.org/abs/2001.08361,
-gpt-3,2020-05,OpenAI presents GPT-3,models;research,https://arxiv.org/abs/2005.14165,
+scaling-laws,2020-01,Scaling laws for language models are published,research;compute,https://arxiv.org/abs/2001.08361,2026-10-25
+gpt-3,2020-05,OpenAI presents GPT-3,models;research,https://arxiv.org/abs/2005.14165,2026-10-25
 alphafold-2,2020-11,AlphaFold 2 solves protein structure prediction at CASP14,research;models,https://en.wikipedia.org/wiki/AlphaFold,
 anthropic-founded,2021,Anthropic is founded,companies;safety,https://en.wikipedia.org/wiki/Anthropic,
+instructgpt,2022-01-27,OpenAI trains InstructGPT with human feedback (RLHF),research;models,https://openai.com/index/instruction-following/,2026-10-25
 stable-diffusion,2022-08-22,Stable Diffusion is released with open weights,models,https://en.wikipedia.org/wiki/Stable_Diffusion,
-chatgpt,2022-11-30,OpenAI launches ChatGPT,products;models,https://openai.com/index/chatgpt/,
+chatgpt,2022-11-30,OpenAI launches ChatGPT,products;models,https://openai.com/index/chatgpt/,2026-10-25
 llama,2023-02-24,Meta releases LLaMA,models,https://arxiv.org/abs/2302.13971,
 gpt-4,2023-03-14,OpenAI releases GPT-4,models;products,https://openai.com/index/gpt-4-research/,
 eu-ai-act-agreement,2023-12-08,EU institutions reach a political agreement on the AI Act,policy;safety,https://en.wikipedia.org/wiki/Artificial_Intelligence_Act,
-o1,2024-09-12,OpenAI o1 introduces trained reasoning,models;research,https://openai.com/index/learning-to-reason-with-llms/,
-mcp,2024-11-25,Anthropic publishes the Model Context Protocol,products,https://www.anthropic.com/news/model-context-protocol,
-deepseek-r1,2025-01-20,DeepSeek R1 brings open-weight reasoning,models;research,https://arxiv.org/abs/2501.12948,
+o1,2024-09-12,OpenAI o1 introduces trained reasoning,models;research,https://openai.com/index/learning-to-reason-with-llms/,2026-10-25
+mcp,2024-11-25,Anthropic publishes the Model Context Protocol,products,https://www.anthropic.com/news/model-context-protocol,2026-10-25
+deepseek-r1,2025-01-20,DeepSeek R1 brings open-weight reasoning,models;research,https://deepseek.com/en/news/deepseek-r1/,2026-10-25
 stargate,2025-01-21,The Stargate data center programme is announced,compute;funding;companies,https://en.wikipedia.org/wiki/Stargate_LLC,
-openclaw,2026-01-30,The open-source personal agent takes the name OpenClaw,products,https://catalaize.substack.com/p/openclaw-from-viral-prototype-to,
+metr-time-horizons,2025-03-18,METR finds the length of tasks AI agents complete doubles about every seven months,research,https://arxiv.org/abs/2503.14499,2026-10-25
+claude-code,2025-05,Claude Code becomes generally available,products,https://en.wikipedia.org/wiki/Claude_(language_model),2026-10-25
+genie-3,2025-08-05,"Google DeepMind presents Genie 3, a real-time world model",models;research,https://techcrunch.com/2025/08/05/deepmind-reveals-genie-3-a-world-model-that-could-be-the-key-to-reaching-agi,2026-10-25
+openclaw,2026-01-30,The open-source personal agent takes the name OpenClaw,products,https://catalaize.substack.com/p/openclaw-from-viral-prototype-to,2026-10-25
+ami-labs,2026-03-10,AMI Labs raises $1.03B to build world models,companies;funding,https://thenextweb.com/news/yann-lecun-ami-labs-world-models-billion,2026-10-25
 muse-spark,2026-04-09,"Meta launches Muse Spark, a closed model",models;companies,https://datanorth.ai/news/meta-releases-muse-spark-first-model-from-superintelligence-labs,
 deepseek-v4,2026-04-24,DeepSeek releases V4 with open weights,models,https://rits.shanghai.nyu.edu/ai/deepseek-releases-v4-open-source-1-6t-moe-with-1m-context,
 ai-act-omnibus,2026-05-07,EU agreement to delay high-risk obligations of the AI Act,policy,https://datamatters.sidley.com/2026/06/22/eu-lawmakers-reach-provisional-agreement-to-delay-key-eu-ai-act-obligations/,
 gpt-6-astra,2026-09-03,OpenAI announces GPT-6 Astra,models,https://openai.com/index/gpt-6-astra/,
-jev,2026-09-15,"TypeSafe AI launches Jev, a decision model",models,https://www.blogdumoderateur.com/jev-modele-ia/,
+jev,2026-09-15,"TypeSafe AI launches Jev, a decision model",models,https://www.blogdumoderateur.com/jev-modele-ia/,2026-10-25
 gemini-4-argon,2026-09-30,Google announces Gemini 4 Argon,models,https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/,
 hermes-funding,2026-10-07,Nous Research raises $90M for Hermes Agent,funding;companies,https://thenextweb.com/news/nous-research-90m-1-5bn-hermes-agent-wsj,
 aaif-projects,2026-10-22,Agent Skills and Open Responses join the Agentic AI Foundation,products;companies,https://aaif.io/news/agentic-ai-foundation-announces-four-new-projects,

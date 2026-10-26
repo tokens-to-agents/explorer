@@ -39,7 +39,7 @@ export type Era = { id: string; label: string; from: number; to: number | null; 
 
 /** The six eras of History › Overview, in order. `to: null` = ongoing. */
 export const eras: Era[] = [
-  { id: "early-ai", label: "Early AI", from: 1943, to: 1993, wiki: "earlyAi" },
+  { id: "early-ai", label: "Early AI", from: 1943, to: 1992, wiki: "earlyAi" },
   { id: "machine-learning", label: "Machine learning", from: 1993, to: 2011, wiki: "machineLearning" },
   { id: "deep-learning", label: "Deep learning", from: 2012, to: 2016, wiki: "deepLearning" },
   { id: "transformers", label: "Transformers", from: 2017, to: 2021, wiki: "transformers" },
@@ -48,7 +48,7 @@ export const eras: Era[] = [
 ];
 
 export function eraOfYear(year: number): Era {
-  // Boundary years (1993) belong to the later era.
+  // Each era starts the year after the previous one ends; a year belongs to the last era that has started.
   const found = [...eras].reverse().find((era) => year >= era.from);
   return found ?? eras[0]!;
 }
