@@ -50,39 +50,66 @@ pause-letter,2023-03,An open letter asks labs to pause training systems beyond G
 gpt-4,2023-03-14,OpenAI releases GPT-4,models;products,https://openai.com/index/gpt-4-research/,2026-10-26
 claude,2023-03-14,Anthropic releases Claude,models;products,https://en.wikipedia.org/wiki/2023_in_artificial_intelligence,2026-10-26
 ai-risk-statement,2023-05-30,Hundreds of experts sign a one-line statement on extinction risk from AI,safety,https://en.wikipedia.org/wiki/2023_in_artificial_intelligence,2026-10-26
+claude-2,2023-07-11,Anthropic releases Claude 2,models,https://en.wikipedia.org/wiki/2023_in_artificial_intelligence,2026-10-26
 llama-2,2023-07-18,Meta and Microsoft release Llama 2,models,https://en.wikipedia.org/wiki/2023_in_artificial_intelligence,2026-10-26
 mistral-7b,2023-09-27,Mistral AI releases Mistral 7B under Apache 2.0,models;companies,https://en.wikipedia.org/wiki/Mistral_AI,2026-10-26
 us-executive-order,2023-10-30,Biden signs Executive Order 14110 on AI,policy;safety,https://en.wikipedia.org/wiki/2023_in_artificial_intelligence,2026-10-26
 bletchley,2023-11-01,28 countries sign the Bletchley Declaration on AI safety,policy;safety,https://en.wikipedia.org/wiki/AI_Safety_Summit_2023,2026-10-26
+grok,2023-11-03,"xAI launches Grok, a chatbot for paying users of X",models;products,https://en.wikipedia.org/wiki/Grok_(chatbot),2026-10-26
 openai-board,2023-11-17,"OpenAI's board removes Sam Altman, who returns days later",companies;safety,https://en.wikipedia.org/wiki/OpenAI,2026-10-26
-gemini,2023-12-06,Google DeepMind introduces Gemini,models,https://en.wikipedia.org/wiki/2023_in_artificial_intelligence,2026-10-26
+gemini,2023-12-06,Google DeepMind introduces Gemini,models,https://en.wikipedia.org/wiki/Gemini_(language_model),2026-10-26
 eu-ai-act-agreement,2023-12-08,EU institutions reach a political agreement on the AI Act,policy;safety,https://en.wikipedia.org/wiki/Artificial_Intelligence_Act,
 sora,2024-02-15,"OpenAI previews Sora, a text-to-video model",models,https://en.wikipedia.org/wiki/2024_in_artificial_intelligence,2026-10-26
+gemini-1-5,2024-02-15,Google's Gemini 1.5 reads up to one million tokens,models,https://en.wikipedia.org/wiki/Gemini_(language_model),2026-10-26
+claude-3,2024-03-04,Anthropic releases the Claude 3 family,models,https://en.wikipedia.org/wiki/Claude_(language_model),2026-10-26
+grok-1-open,2024-03-17,xAI publishes the weights of Grok-1 under Apache 2.0,models,https://en.wikipedia.org/wiki/Grok_(chatbot),2026-10-26
+llama-3,2024-04-18,Meta releases Llama 3,models,https://en.wikipedia.org/wiki/Llama_(language_model),2026-10-26
+gpt-4o,2024-05-13,"OpenAI's GPT-4o handles audio, images and text in real time",models;products,https://en.wikipedia.org/wiki/2024_in_artificial_intelligence,2026-10-26
+claude-3-5-sonnet,2024-06-20,Anthropic releases Claude 3.5 Sonnet,models,https://en.wikipedia.org/wiki/Claude_(language_model),2026-10-26
+llama-3-1,2024-07-23,Meta releases Llama 3.1 405B with open weights,models,https://en.wikipedia.org/wiki/Llama_(language_model),2026-10-26
 eu-ai-act-in-force,2024-08-01,The EU AI Act enters into force,policy,https://en.wikipedia.org/wiki/2024_in_artificial_intelligence,2026-10-26
 o1,2024-09-12,OpenAI o1 introduces trained reasoning,models;research,https://openai.com/index/learning-to-reason-with-llms/,2026-10-25
 nobel-2024,2024-10-08,"Nobel prizes go to Hopfield and Hinton, then Hassabis and Jumper, for AI work",research,https://en.wikipedia.org/wiki/2024_in_artificial_intelligence,2026-10-26
 computer-use,2024-10-22,"Claude starts using a computer's screen, mouse and keyboard",products;models,https://techcrunch.com/2024/10/22/anthropics-new-ai-can-control-your-pc/,2026-10-26
 mcp,2024-11-25,Anthropic publishes the Model Context Protocol,products,https://www.anthropic.com/news/model-context-protocol,2026-10-25
+deepseek-v3,2024-12,DeepSeek releases V3 with open weights,models,https://en.wikipedia.org/wiki/List_of_large_language_models,2026-10-26
+o3,2024-12-20,OpenAI's o3 posts a high score on the ARC-AGI test,models;research,https://en.wikipedia.org/wiki/2024_in_artificial_intelligence,2026-10-26
 deepseek-r1,2025-01-20,DeepSeek R1 brings open-weight reasoning,models;research,https://deepseek.com/en/news/deepseek-r1/,2026-10-25
 stargate,2025-01-21,The Stargate data center programme is announced,compute;funding;companies,https://en.wikipedia.org/wiki/Stargate_LLC,2026-10-26
+operator,2025-01-23,OpenAI's Operator agent uses a web browser for its users,products,https://en.wikipedia.org/wiki/OpenAI_Operator,2026-10-26
 nvidia-drop,2025-01-27,NVIDIA shares fall about 17% after DeepSeek R1,compute;funding,https://en.wikipedia.org/wiki/2025_in_artificial_intelligence,2026-10-26
+deep-research,2025-02-02,"OpenAI releases Deep Research, an agent that writes research reports",products,https://en.wikipedia.org/wiki/2025_in_artificial_intelligence,2026-10-26
 paris-summit,2025-02-10,Paris AI Action Summit; the US and UK do not sign the declaration,policy,https://en.wikipedia.org/wiki/2025_in_artificial_intelligence,2026-10-26
+grok-3,2025-02-17,xAI releases Grok 3,models,https://en.wikipedia.org/wiki/Grok_(chatbot),2026-10-26
+claude-3-7,2025-02-24,Anthropic releases Claude 3.7 Sonnet and previews Claude Code,models;products,https://en.wikipedia.org/wiki/2025_in_artificial_intelligence,2026-10-26
 metr-time-horizons,2025-03-18,METR finds the length of tasks AI agents complete doubles about every seven months,research,https://arxiv.org/abs/2503.14499,2026-10-25
-claude-code,2025-05,Claude Code becomes generally available,products,https://en.wikipedia.org/wiki/Claude_(language_model),2026-10-25
+gemini-2-5,2025-03-25,Google releases Gemini 2.5 Pro,models,https://en.wikipedia.org/wiki/Gemini_(language_model),2026-10-26
+llama-4,2025-04-05,Meta releases Llama 4,models,https://en.wikipedia.org/wiki/Llama_(language_model),2026-10-26
+qwen3,2025-04-28,Alibaba releases Qwen3 under Apache 2.0,models,https://en.wikipedia.org/wiki/Qwen,2026-10-26
+codex,2025-05-16,"OpenAI previews Codex, a cloud coding agent",products,https://en.wikipedia.org/wiki/OpenAI_Codex,2026-10-26
+claude-code,2025-05-22,Anthropic releases Claude 4 and makes Claude Code generally available,models;products,https://en.wikipedia.org/wiki/Claude_(language_model),2026-10-26
 imo-gold,2025-07,Models from OpenAI and Google DeepMind reach gold-medal level at the Math Olympiad,research;models,https://en.wikipedia.org/wiki/2025_in_artificial_intelligence,2026-10-26
+grok-4,2025-07-09,xAI releases Grok 4,models,https://en.wikipedia.org/wiki/Grok_(chatbot),2026-10-26
+nvidia-4t,2025-07-09,NVIDIA becomes the first company worth $4 trillion,compute;companies,https://en.wikipedia.org/wiki/2025_in_artificial_intelligence,2026-10-26
 gpai-obligations,2025-08-02,EU AI Act rules for general-purpose models start to apply,policy,https://en.wikipedia.org/wiki/2025_in_artificial_intelligence,2026-10-26
 genie-3,2025-08-05,"Google DeepMind presents Genie 3, a real-time world model",models;research,https://techcrunch.com/2025/08/05/deepmind-reveals-genie-3-a-world-model-that-could-be-the-key-to-reaching-agi,2026-10-25
+gpt-oss,2025-08-05,"OpenAI releases gpt-oss, open-weight models under Apache 2.0",models,https://en.wikipedia.org/wiki/GPT-OSS,2026-10-26
 gpt-5,2025-08-07,OpenAI releases GPT-5,models,https://en.wikipedia.org/wiki/2025_in_artificial_intelligence,2026-10-26
+nvidia-openai,2025-09-22,NVIDIA plans to invest up to $100B in OpenAI,funding;compute,https://en.wikipedia.org/wiki/2025_in_artificial_intelligence,2026-10-26
+sb-53,2025-09-29,"California signs SB 53, a safety law for frontier AI",policy;safety,https://en.wikipedia.org/wiki/2025_in_artificial_intelligence,2026-10-26
+gemini-3,2025-11-18,Google releases Gemini 3 Pro,models,https://en.wikipedia.org/wiki/Gemini_(language_model),2026-10-26
+lecun-leaves-meta,2025-11-19,Yann LeCun announces he will leave Meta,companies,https://en.wikipedia.org/wiki/2025_in_artificial_intelligence,2026-10-26
 aaif-founded,2025-12-09,"The Agentic AI Foundation is formed around MCP, goose and AGENTS.md",companies;products,https://www.linuxfoundation.org/press/linux-foundation-announces-the-formation-of-the-agentic-ai-foundation,2026-10-26
-openclaw,2026-01-30,The open-source personal agent takes the name OpenClaw,products,https://catalaize.substack.com/p/openclaw-from-viral-prototype-to,2026-10-25
+grok-ban,2026-01-10,Indonesia blocks Grok over sexualised deepfakes,policy;safety,https://en.wikipedia.org/wiki/2026_in_artificial_intelligence,2026-10-26
+openclaw,2026-01-30,The open-source personal agent takes the name OpenClaw,products,https://en.wikipedia.org/wiki/OpenClaw,2026-10-26
 ami-labs,2026-03-10,AMI Labs raises $1.03B to build world models,companies;funding,https://thenextweb.com/news/yann-lecun-ami-labs-world-models-billion,2026-10-25
-muse-spark,2026-04-09,"Meta launches Muse Spark, a closed model",models;companies,https://datanorth.ai/news/meta-releases-muse-spark-first-model-from-superintelligence-labs,
+muse-spark,2026-04-08,"Meta launches Muse Spark, a closed model",models;companies,https://thenextweb.com/news/meta-muse-spark-msl-first-model,2026-10-26
 deepseek-v4,2026-04-24,DeepSeek releases V4 with open weights,models,https://rits.shanghai.nyu.edu/ai/deepseek-releases-v4-open-source-1-6t-moe-with-1m-context,
 ai-act-omnibus,2026-05-07,EU agreement to delay high-risk obligations of the AI Act,policy,https://datamatters.sidley.com/2026/06/22/eu-lawmakers-reach-provisional-agreement-to-delay-key-eu-ai-act-obligations/,
 fable-mythos,2026-06-09,Anthropic releases Claude Fable 5 and Claude Mythos 5,models,https://www.casrai.org/news/anthropic-fable-mythos-export-control-suspension,2026-10-26
 fable-export-controls,2026-06-12,US export controls suspend access to Fable 5 and Mythos 5 until 1 July,policy;safety,https://www.casrai.org/news/anthropic-fable-mythos-export-control-suspension,2026-10-26
 gpt-6-astra,2026-09-03,OpenAI announces GPT-6 Astra,models,https://openai.com/index/gpt-6-astra/,
-jev,2026-09-15,"TypeSafe AI launches Jev, a decision model",models,https://www.blogdumoderateur.com/jev-modele-ia/,2026-10-25
+jev,2026-09-15,"TypeSafe AI launches Jev, a decision model",models,https://en.wikipedia.org/wiki/Jev_(AI_model),2026-10-26
 gemini-4-argon,2026-09-30,Google announces Gemini 4 Argon,models,https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/,
 hermes-funding,2026-10-07,Nous Research raises $90M for Hermes Agent,funding;companies,https://thenextweb.com/news/nous-research-90m-1-5bn-hermes-agent-wsj,
 aaif-projects,2026-10-22,Agent Skills and Open Responses join the Agentic AI Foundation,products;companies,https://aaif.io/news/agentic-ai-foundation-announces-four-new-projects,

@@ -10,7 +10,6 @@ export const wikiPages = {
   home: { title: "Wiki home", path: "", live: true },
   foundations: { title: "Foundations", path: "foundations/overview", live: true },
   historyOverview: { title: "History", path: "history/overview", live: false },
-  timeline: { title: "Timeline", path: "history/timeline", live: false },
   languageModels: { title: "Language models", path: "models/language-models", live: false },
   labs: { title: "Labs", path: "ecosystem/labs", live: false },
   dataCenters: { title: "Data centers", path: "infrastructure/compute/data-centers", live: false },
