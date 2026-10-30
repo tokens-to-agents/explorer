@@ -9,7 +9,7 @@ export type WikiPage = { title: string; path: string; live: boolean };
 export const wikiPages = {
   home: { title: "Wiki home", path: "", live: true },
   foundations: { title: "Foundations", path: "foundations/overview", live: true },
-  historyOverview: { title: "History", path: "history/overview", live: false },
+  historyOverview: { title: "History", path: "history/overview", live: true },
   languageModels: { title: "Language models", path: "models/language-models", live: false },
   labs: { title: "Labs", path: "ecosystem/labs", live: false },
   dataCenters: { title: "Data centers", path: "infrastructure/compute/data-centers", live: false },
@@ -18,12 +18,12 @@ export const wikiPages = {
   energy: { title: "Energy", path: "infrastructure/compute/energy", live: false },
   geopolitics: { title: "Geopolitics", path: "infrastructure/geopolitics", live: false },
   investment: { title: "Investment", path: "infrastructure/investment", live: false },
-  earlyAi: { title: "Early AI", path: "history/early-ai", live: false },
-  machineLearning: { title: "Machine learning", path: "history/machine-learning", live: false },
-  deepLearning: { title: "Deep learning", path: "history/deep-learning", live: false },
-  transformers: { title: "Transformers", path: "history/transformers", live: false },
-  generativeAi: { title: "Generative AI", path: "history/generative-ai", live: false },
-  reasoningAgents: { title: "Reasoning & agents", path: "history/reasoning-and-agents", live: false },
+  earlyAi: { title: "Early AI", path: "history/overview/early-ai-1943-1992", live: true },
+  machineLearning: { title: "Machine learning", path: "history/overview/machine-learning-1993-2011", live: true },
+  deepLearning: { title: "Deep learning", path: "history/overview/deep-learning-2012-2016", live: true },
+  transformers: { title: "Transformers", path: "history/overview/transformers-2017-2021", live: true },
+  generativeAi: { title: "Generative AI", path: "history/overview/generative-ai-2022-2023", live: true },
+  reasoningAgents: { title: "Reasoning & agents", path: "history/overview/reasoning-and-agents-2024-today", live: true },
 } satisfies Record<string, WikiPage>;
 
 export type WikiPageKey = keyof typeof wikiPages;
